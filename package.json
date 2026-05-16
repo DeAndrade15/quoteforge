@@ -4,6 +4,7 @@
   "description": "Gerador de propostas comerciais com IA",
   "scripts": {
     "start": "node backend/server.js",
+    "postinstall": "cd backend && npm install && cd ../frontend && npm install && npm run build",
     "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
     "dev:backend": "cd backend && npm install && node server.js",
     "dev:frontend": "cd frontend && npm run dev"

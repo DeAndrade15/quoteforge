@@ -1,0 +1,14 @@
+{
+  "name": "quoteforge",
+  "version": "1.0.0",
+  "description": "Gerador de propostas comerciais com IA",
+  "scripts": {
+    "start": "node backend/server.js",
+    "build": "cd frontend && npm install && npm run build",
+    "dev:backend": "cd backend && npm install && node server.js",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

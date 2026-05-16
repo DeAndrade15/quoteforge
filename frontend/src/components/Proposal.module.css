@@ -1,0 +1,287 @@
+.outer { width: 100%; }
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+
+.btnNova {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.btnNova:hover { color: var(--white); border-color: var(--accent); }
+
+.btnPDF {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btnPDF:hover { opacity: 0.85; }
+
+/* DOCUMENT */
+.doc {
+  background: #fff;
+  color: #1a1a2e;
+  border-radius: 12px;
+  padding: 52px 56px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 24px 64px rgba(0,0,0,0.3);
+}
+
+.docHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.docLogo { display: flex; align-items: center; gap: 10px; }
+
+.docLogoBadge {
+  width: 36px; height: 36px;
+  background: #7c3aed;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.docLogoName { font-weight: 700; font-size: 1rem; color: #1a1a2e; }
+
+.docMeta { text-align: right; }
+.docData { font-size: 0.82rem; color: #64748b; }
+.docValidade { font-size: 0.78rem; color: #94a3b8; margin-top: 2px; }
+
+.docDivider {
+  height: 2px;
+  background: linear-gradient(90deg, #7c3aed, #a78bfa, transparent);
+  margin-bottom: 28px;
+  border-radius: 1px;
+}
+
+.docParties {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 32px;
+}
+
+.partyLabel { font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.partyName  { font-size: 1rem; font-weight: 700; color: #1a1a2e; }
+.arrowIcon  { color: #7c3aed; font-size: 1.4rem; margin: 0 8px; }
+
+.docTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f0f1a;
+  line-height: 1.3;
+  margin-bottom: 36px;
+  letter-spacing: -0.3px;
+}
+
+/* SECTIONS */
+.section { margin-bottom: 36px; }
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.sectionNum {
+  background: #7c3aed;
+  color: #fff;
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.sectionText { color: #475569; line-height: 1.75; font-size: 0.92rem; }
+
+/* LISTA ESCOPO */
+.list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.check {
+  color: #7c3aed;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.naoIncluso {
+  margin-top: 18px;
+  background: #fef9f0;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+.naoInclusoLabel { font-size: 0.78rem; font-weight: 700; color: #92400e; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.naoInclusoList  { list-style: disc; padding-left: 18px; }
+.naoInclusoList li { font-size: 0.85rem; color: #78350f; margin-bottom: 4px; }
+
+/* CRONOGRAMA */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+
+.timelineItem {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.timelineItem:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 18px;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.timelineDot {
+  width: 16px; height: 16px;
+  border: 2px solid #7c3aed;
+  background: #fff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineContent { flex: 1; }
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.timelineFase    { font-size: 0.9rem; font-weight: 700; color: #1a1a2e; }
+.timelineDuracao {
+  font-size: 0.78rem; font-weight: 600;
+  color: #7c3aed;
+  background: rgba(124,58,237,0.08);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.timelineEntregaveis { font-size: 0.85rem; color: #64748b; line-height: 1.5; }
+
+/* INVESTIMENTO */
+.investBox {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.investTotal {
+  background: #7c3aed;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 22px;
+}
+.investLabel { font-size: 0.82rem; font-weight: 600; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.5px; }
+.investValue { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; }
+
+.investRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 22px;
+  font-size: 0.88rem;
+  color: #475569;
+  border-top: 1px solid #f1f5f9;
+}
+.investRow span:last-child { font-weight: 600; color: #1a1a2e; }
+
+.investJust { font-size: 0.83rem; color: #64748b; font-style: italic; }
+
+/* TERMOS */
+.termosList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.termosList li {
+  font-size: 0.87rem;
+  color: #475569;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+.termosList li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+/* FOOTER */
+.docFooter {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 640px) {
+  .doc { padding: 32px 24px; }
+  .docParties { flex-direction: column; gap: 12px; }
+  .arrowIcon { transform: rotate(90deg); }
+}

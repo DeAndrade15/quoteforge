@@ -4,10 +4,11 @@
   "description": "Gerador de propostas comerciais com IA",
   "scripts": {
     "start": "node backend/server.js",
-    "postinstall": "cd backend && npm install",
-    "build": "cd backend && npm install",
     "dev:backend": "cd backend && npm install && node server.js",
     "dev:frontend": "cd frontend && npm run dev"
+  },
+  "dependencies": {
+    "@google/genai": "^1.52.0"
   },
   "engines": {
     "node": ">=18.0.0"
